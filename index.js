@@ -42,14 +42,16 @@ router.get('/:id', function(req, res, next) {
         next(err);
     });
 });
+//helloo im mohit chauhan
 
 router.post('/', function(req, res, next) {
-    pieRepo.insert(req.params.id, function(err, id) {
+    console.log('coming data is :',req.body);
+    pieRepo.insert(req.body, function(err, id) {
         res.status(200).json({
             "status": 200,
             "statusText": "created",
             "messeage": "new data added",
-            "data": data
+            // "data": data
         });
     }, function(err) {
         next(err);

@@ -27,6 +27,7 @@ let pieRepo = {
     },
     //add data by id
     insert: function(newData, cb) {
+        console.log('new data is insert',newData);
         fs.readFile(FILE_NAME, function(err, data) {
             if (err) {
                 cb(err, undefined)
