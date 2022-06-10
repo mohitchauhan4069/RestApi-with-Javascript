@@ -42,8 +42,6 @@ router.get('/:id', function(req, res, next) {
         next(err);
     });
 });
-//helloo im mohit chauhan
-//check for github
 
 router.post('/', function(req, res, next) {
     pieRepo.insert(req.params.id, function(err, id) {
